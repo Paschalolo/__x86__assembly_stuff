@@ -17,7 +17,8 @@ bVar3 db 0
 
 ;-------------------
 
-; Word (16 bit) vairable declerations 
+; Word (16 bit) vairable declerations
+align 4 
 wVar1 dd 17000000
 wVar2 dd 9000000
 dResult dd 0 
@@ -25,15 +26,17 @@ dResult dd 0
 ; -----------
 
 ; QuadWord (64 bit) 
+align 8 
 qVar1 dq 19733333
 qVar2 dq 900000000
 qVar3 dq 0 
 ; ***********************************
 
 ; code section 
+
 SECTION .text 
 	global _start 
-
+align 8
 _start : 
 	; perfrom a series of very basic addition operations to
 	; demonstrate program format 
