@@ -13,7 +13,7 @@ SECTION .data
 
 bVar1 db 17 
 bVar2 db 9 
-bVar3 0 
+bVar3 db 0 
 
 ;-------------------
 
@@ -32,7 +32,7 @@ qVar3 dq 0
 
 ; code section 
 SECTION .text 
-	gloabl _start 
+	global _start 
 
 _start : 
 	; perfrom a series of very basic addition operations to
