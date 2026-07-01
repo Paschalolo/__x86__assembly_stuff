@@ -29,4 +29,32 @@ SECTION .data
 	adc rdx , qword[dquad2 + 8 ] 
 
 	mov qword[dquad3] , rax
-	mov qword[dquad3 + 8 ] , rdx 
+	mov qword[dquad3 + 8 ] , rdx
+
+	; subtraction 
+
+SECTION  .text 
+	mov al , byte[bNum1] 
+	sub al , byte[bNum2]
+	mov byte[bAns] , al 
+
+	; Word 
+	mov ax , word[bNum1] 
+	sub ax , word[bNum2] 
+	mov word[bAns] , ax 
+
+	; Quad Word 
+	mov rax , qword[qNum1]
+	sub rax , qword[qNum2]
+	mov qword[qAns] , rax 
+
+
+; Dec -> this decrments the memeroy location or register by 1 
+; it is not as fast as lea or sub . Use it is better 
+
+SECTION .text 
+	dec rax 
+	dec byte[bNum] 
+	dec word[wNum] 
+	dec dword[dNum] 
+	dec qword[qNum] ; qNum = qNum -1 ;
