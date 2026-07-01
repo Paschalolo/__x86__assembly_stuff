@@ -76,4 +76,46 @@ SECTION .text
 	mov dx , 0 
 	mov bx ,5 
 	div bx 
-	mov word[wAns] , ax 
+	mov word[wAns] , ax
+
+; Logical operations 
+; and , or , xor , not 
+
+; settting flags setxx i.e setc (set carry flags to carry flag), seto (set overflow flags to al )
+
+; shifting operations 
+; shl <dest> , <immedate> 
+; shl >dest> , cl 
+; sar -> used to mostly shift signed integers by carrying and pushing the signed bit
+; sal -> used to mostly shift signed integers left by carry the signed bits
+
+; Rotate equations 
+; rol , ror 
+
+
+; control instructions 
+; This are more like if else statment or function calls jmp , jXX i.e je , jc , jne 
+
+SECTION .text
+loopStart : 
+	jmp last 
+last : 
+
+; conditionla control instuctions 
+; cmp sets the flags that conditionla insturcitons use 
+
+mov rax , qword[currNum] 
+cmp rax , qword[myMax] 
+jle notNewMax 
+mov qword[myrax] , rax 
+notNewMax: 
+
+
+
+
+
+
+
+
+
+
