@@ -67,4 +67,13 @@ SECTION .text
 	mov eax , dword[dMul1] 
 	mul dword[dMul2] 
 	mov dword[dMul3] , rax 
-	mov dword[dMul3 + 4 ] , rdx; rdx contains the upper bits of the arithmetic  
+	mov dword[dMul3 + 4 ] , rdx; rdx contains the upper bits of the arithmetic 
+
+
+SECTION .text 
+	; div 
+	mov ax , word[wNumA] 
+	mov dx , 0 
+	mov bx ,5 
+	div bx 
+	mov word[wAns] , ax 
