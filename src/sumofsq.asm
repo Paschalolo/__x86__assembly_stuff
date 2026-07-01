@@ -21,13 +21,13 @@ _start :
 	; for(int i = 1 ; i <= n ; i++)
 	;	sumofsquaress += i ^2 ;
 	mov ebx , dword[n] 
-	mov ecx , 0 
+	mov ecx , 1 
 	xor rdi , rdi 
 func : 
-	add ecx , 1 
 	mov eax , ecx 
 	mul ecx 
 	add rdi , rax 
+	add ecx , 1 
 	cmp ecx , ebx 
 	jbe func 
 	; mov temporary reguster to value 
