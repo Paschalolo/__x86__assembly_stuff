@@ -58,3 +58,13 @@ SECTION .text
 	dec word[wNum] 
 	dec dword[dNum] 
 	dec qword[qNum] ; qNum = qNum -1 ;
+
+; Multiplication 
+; mul <src> 
+; imul -> signed numbrs ; mul for unsigned integers
+
+SECTION .text 
+	mov eax , dword[dMul1] 
+	mul dword[dMul2] 
+	mov dword[dMul3] , rax 
+	mov dword[dMul3 + 4 ] , rdx; rdx contains the upper bits of the arithmetic  
