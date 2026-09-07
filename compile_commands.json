@@ -24,12 +24,13 @@
       "-I",
       "src",
       "-std=c++23",
+      "./src/aa2_a.o",
       "-o",
-      "./bin/aa1",
-      "./src/aa1.cpp"
+      "./bin/aa2",
+      "src/aa2.cpp"
     ],
     "directory": "/home/paschalolo/studyWeb/assem",
-    "file": "/home/paschalolo/studyWeb/assem/src/aa1.cpp",
-    "output": "/home/paschalolo/studyWeb/assem/bin/aa1"
+    "file": "/home/paschalolo/studyWeb/assem/src/aa2.cpp",
+    "output": "/home/paschalolo/studyWeb/assem/bin/aa2"
   }
 ]
