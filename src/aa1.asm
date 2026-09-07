@@ -14,4 +14,6 @@ AddSubI32_a :
 	sub eax , edx
 	add eax , 7
 	ret 
-	
+
+
+section .note.GNU-stack noalloc noexec nowrite progbits
