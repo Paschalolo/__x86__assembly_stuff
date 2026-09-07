@@ -29,3 +29,5 @@ create1:
 	touch src/$(ASMFILE)
 push : 
 	git add  . && git commit -m "update x86 sim DDD" && git push origin main
+clean : 
+	rm src/*.0
