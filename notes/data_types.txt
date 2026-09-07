@@ -1,0 +1,38 @@
+
+//------------------------------------------------------//
+Byte   		 | 8 bits 
+word   		 | 16 bits 
+double word      | 32  bits 
+quad word        | 64 bits 
+double quad word | 128 bits
+
+Alignment : 
+During x86 vectorization programming it is standard practice to align data types to thier appropraite sizes. 
+No alignment can lead to servere perfromance problems i.e multiple loads and store instead of one because values exceed the cache line . This further cascades when you have a large chain of array of structs
+
+Integer types 
+Range from 8 bits - 128 bits 
+Note : You can store values in 3 bits or any odd number of bits but this will require some bit manipulation 
+Signed integer , Unsigned integer , Floating point types (single precision and double precision )
+
+SIMD data types 
+---------------
+Xmmword - 128 bits 
+Ymmword  - 256 bits 
+ZmmWord - 512 bits 
+
+X86-64 processor Architecture 
+64bit register it has 16 genral purpose registers and 16 in some 32 vector registers 
+Genral purpose registers 
+rax , rbx , rcx , rdx , rsp , rbp , rdi , rdi , r8-r15 
+rip-> insturction pointer or Program counter 
+k0-k7 -> mask falg registers 
+mxcsr -> control status flags 
+RFLAGS -> program control and status 
+
+
+Memory addresing 
+Effective address = base reg + index * (scale + displacemtn)
+
+
+
