@@ -3,7 +3,7 @@ MFILE = $(FILE).cpp
 ASMFILE=$(FILE).asm
 ASMOBJ = $(FILE)_a.o
 GCC = g++-14
-GCCFLAGS = -Wall -Wextra -Werror -Wpedantic -Wnull-dereference  -Wshadow -mavx2 -Wconversion -Wduplicated-branches -Wlogical-op -O3  -Wformat=2   -pthread -mavx2 
+GCCFLAGS = -Wall -Wextra -Werror -Wpedantic -Wnull-dereference  -Wshadow -mavx2 -Wconversion -Wduplicated-branches -Wlogical-op -O3  -Wformat=2   -pthread -mavx2 -flto -fno-exceptions
 C23 = -std=c++23
 INCLUDES = -I includes -I src 
 COMPILE.c = $(GCC) $(GCCFLAGS) $(INCLUDES) $(C23)
@@ -19,7 +19,10 @@ run : $(MFILE) $(HARGS)
 	$(COMPILE.c) $<  ./src/$(ASMOBJ) -o ./bin/$(FILE)  && ./bin/$(FILE)  
 run2 : 
 	$(COMPILEASM.o) ./src/$(ASMFILE) -o ./src/$(ASMOBJ)
-
+run3 : 
+	$(COMPILE.c) ./src/$(MFILE) -o ./bin/$(FILE)
+cc1: 
+	touch src/$(MFILE)
 create: 
 	touch src/$(MFILE) && touch src/$(ASMFILE)
 create1: 
