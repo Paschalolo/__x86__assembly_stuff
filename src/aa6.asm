@@ -27,3 +27,6 @@ Area_A :
 	vmovq qword[rdi] , xmm0 
 	ret 
 
+Comparef32_avx : 
+	vcmpss xmm5 , xmm1 , xmm2 , 15
+	ret
