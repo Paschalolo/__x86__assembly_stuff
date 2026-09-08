@@ -17,10 +17,10 @@ vpath %.h includes
 run : $(MFILE) $(HARGS)
 	$(COMPILEASM.o) ./src/$(ASMFILE) -o ./src/$(ASMOBJ)
 	$(COMPILE.c) $<  ./src/$(ASMOBJ) -o ./bin/$(FILE)  && ./bin/$(FILE)  
-run2 : 
+run2 : $(MFILE) $(HARGS) 
 	$(COMPILEASM.o) ./src/$(ASMFILE) -o ./src/$(ASMOBJ)
-run3 : 
-	$(COMPILE.c) ./src/$(MFILE) -o ./bin/$(FILE)
+run3 :	$(MFILE)  
+	$(COMPILE.c) ./src/$(MFILE) -o ./bin/$(FILE) && ./bin/$(FILE)
 cc1: 
 	touch src/$(MFILE)
 create: 
