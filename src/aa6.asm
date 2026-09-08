@@ -13,8 +13,8 @@ Volume_A :
 	vmulsd xmm1 , xmm1 , qword[PI]
 	vmulsd xmm0 , xmm1 , xmm0 
 	vdivsd xmm0 , xmm0 , xmm2
+	vmovq qword[rdi] , xmm0 
 	ret
-
 ; raduis - xmm0 , height xmm1 
 Area_A : 
 	vmovq xmm2 , xmm0
@@ -23,6 +23,7 @@ Area_A :
 	vaddsd xmm0 , xmm1 , xmm0 
 	vmulsd xmm1 , xmm2 , qword[PI]
 	vaddsd xmm0 , xmm0 , xmm2 
-	vmulsd xmm0 , xmm0 , xmm1 
+	vmulsd xmm0 , xmm0 , xmm1
+	vmovq qword[rdi] , xmm0 
 	ret 
 
