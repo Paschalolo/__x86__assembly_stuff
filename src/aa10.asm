@@ -24,5 +24,6 @@ Calcz_app :
 	add  r8 , 1 
 	sub rcx , 1
 	jmp .scalar_loop
-fin : 
+fin :
+	vzeroupper 
 	ret 
