@@ -45,6 +45,7 @@ calcDistance:
 	vmovapd [rbx + rax] , ymm5 
 	sub r10 , NSE ; NSE is a macro defined 
 	jnz .Loop 
+Done :
 	add rsp , 16 
 	pop r15 
 	pop r14 
@@ -52,4 +53,8 @@ calcDistance:
 	pop r12 
 	pop rbx
 	vzeroupper 
-	ret 
+	ret
+badArgs : 
+	xor rax , rax 
+
+	jmp Done ; 
