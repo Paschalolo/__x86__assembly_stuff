@@ -1,0 +1,10 @@
+
+
+GUIDE TO WRITING AVX 512
+------------------------
+
+Avx 512 contains 512 bits registers it is twice as large as avx 2 it has a new mask registers which consists of 8 64 bit registers 
+i.e
+vaddps zmm2 , zmm0 , zmm1 ; This is regular addition will add zmm0 and zmm1 and store the values in zmm2 
+vaddps zmm2 {k1} , zmm0 , zmm1 ; This will add only the values in which have thier masks set to 1
+vaddps zmm2{k1} {z} , zmm0 , zmm1 ; This will add only the values in which thier maskd are set to 1 but also will set all unmasked values to zero . 
