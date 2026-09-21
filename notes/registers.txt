@@ -1,0 +1,10 @@
+
+
+64 bit Memory model 
+There are 15 GPR registers and 15 FP registers 
+
+Segemnt registers 
+CS , SS , DS , ES , FS , GS 
+
+RFLAGS regitsers 
+Containts the programs state running i.e interrput bits , parity bit , auxillary bit , zero bit , overflow bit , carry bit , signed bit , Alignment check bit 
