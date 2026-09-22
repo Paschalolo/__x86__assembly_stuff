@@ -7,4 +7,25 @@ Segemnt registers
 CS , SS , DS , ES , FS , GS 
 
 RFLAGS regitsers 
-Containts the programs state running i.e interrput bits , parity bit , auxillary bit , zero bit , overflow bit , carry bit , signed bit , Alignment check bit 
+Containts the programs state running i.e interrput bits , parity bit , auxillary bit , zero bit , overflow bit , carry bit , signed bit , Alignment check bit
+
+Control register cr0 , cr1 , cr2 , cr3
+
+=============
+Data Types 
+=============
+
+byte : 8 bits 
+word : 16 bits 
+doubleword : 32 bits 
+quadword : 64bits 
+double quadword : 128bits
+
+===============
+SIMD DATA TYPES
+===============
+128 bits , 256 bits , 512 bits : Avx512f
+
+
+Interrupts 
+This is an external event triggered by an i/o device 
